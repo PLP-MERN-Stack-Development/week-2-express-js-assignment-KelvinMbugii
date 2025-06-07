@@ -1,63 +1,52 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19690608&assignment_repo_type=AssignmentRepo)
-# Express.js RESTful API Assignment
+#  Product API - Week 2 Assignment
 
-This assignment focuses on building a RESTful API using Express.js, implementing proper routing, middleware, and error handling.
+This is a simple RESTful API built using **Node.js** and **Express.js** to manage products using an **in-memory database** . It supports basic CRUD operations and includes request logging, custom error handling, and basic token-based authentication.
 
-## Assignment Overview
+---
 
-You will:
-1. Set up an Express.js server
-2. Create RESTful API routes for a product resource
-3. Implement custom middleware for logging, authentication, and validation
-4. Add comprehensive error handling
-5. Develop advanced features like filtering, pagination, and search
+##  Features
 
-## Getting Started
+- Create, Read, Update, and Delete (CRUD) products
+- In-memory data storage (array)
+- Request logging middleware
+- Custom error-handling middleware
+- Token-based authentication using the `Authorization` header
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install dependencies:
-   ```
-   npm install
-   ```
-4. Run the server:
-   ```
-   npm start
-   ```
+---
 
-## Files Included
+##  Tech Stack
 
-- `Week2-Assignment.md`: Detailed assignment instructions
-- `server.js`: Starter Express.js server file
-- `.env.example`: Example environment variables file
+- Node.js
+- Express.js
+- uuid (for generating unique IDs)
+- Postman (for testing)
 
-## Requirements
+---
 
-- Node.js (v18 or higher)
-- npm or yarn
-- Postman, Insomnia, or curl for API testing
+##  Project Structure
+ -- server.js
+ -- package.json
+ -- package-lock.json
+ -- README.md
 
-## API Endpoints
+## Setup instructions
 
-The API will have the following endpoints:
+### 1. Clone the Repository
 
-- `GET /api/products`: Get all products
-- `GET /api/products/:id`: Get a specific product
-- `POST /api/products`: Create a new product
-- `PUT /api/products/:id`: Update a product
-- `DELETE /api/products/:id`: Delete a product
+   https://github.com/PLP-MERN-Stack-Development/week-2-express-js-assignment-KelvinMbugii.git
 
-## Submission
+### 2. install dependencies
+   -- npm install
+   -- npm install uuid
+   -- npm install nodemon
+### 3. Run the server
+   -- npm run dev
+   -- server runs on http://localhost:3000
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+### 4. Test the API in postman Through:
+  -- 1. Get request -> /api/products
+  -- 2. Get a single product -> /api/products/:id
+  -- 3. POST -> /api/products => this is protected. Required to include ==> -- Authorization: mysecrettoken in the header
 
-1. Complete all the required API endpoints
-2. Implement the middleware and error handling
-3. Document your API in the README.md
-4. Include examples of requests and responses
-
-## Resources
-
-- [Express.js Documentation](https://expressjs.com/)
-- [RESTful API Design Best Practices](https://restfulapi.net/)
-- [HTTP Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) 
+  -- 4. PUT -> /api/products/:id
+  -- 5. DELETE -> /api/products/:id
